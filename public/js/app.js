@@ -1842,6 +1842,20 @@ module.exports = {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
+var prevScrollPos = window.pageYOffset;
+
+window.onscroll = function () {
+  var currentScrollPos = window.pageYOffset;
+
+  if (prevScrollPos > currentScrollPos) {
+    document.querySelector(".header").style.opacity = "1";
+  } else {
+    document.querySelector(".header").style.opacity = "0";
+  }
+
+  prevScrollPos = currentScrollPos;
+};
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
