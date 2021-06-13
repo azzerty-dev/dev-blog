@@ -10,7 +10,7 @@
 </head>
 <body>
 
-<div class="header">
+<header>
     <a class="header-logo" href="#">
         <img src="{{asset('/storage/logo.svg')}}" alt="">
     </a>
@@ -24,11 +24,20 @@
         <a href="#"> Контакты </a>
 
     </div>
-</div>
+</header>
 
-<section>
+<section style="margin-top: 4rem">
     @yield('content')
 </section>
+
+
+<footer>
+    <div class="footer-media">
+        <a href=""> <img src="{{asset('/storage/github-icon.svg')}}" alt=""> </a>
+        <a href=""> <img src="{{asset('/storage/telegram-icon.svg')}}" alt=""> </a>
+        <a href=""> <img src="{{asset('/storage/mail-icon.svg')}}" alt=""> </a>
+    </div>
+</footer>
 <script src="{{asset('/js/app.js')}}"></script>
 </body>
 

@@ -1848,9 +1848,9 @@ window.onscroll = function () {
   var currentScrollPos = window.pageYOffset;
 
   if (prevScrollPos > currentScrollPos) {
-    document.querySelector(".header").style.opacity = "1";
+    document.querySelector("header").style.opacity = "1";
   } else {
-    document.querySelector(".header").style.opacity = "0";
+    document.querySelector("header").style.opacity = "0";
   }
 
   prevScrollPos = currentScrollPos;

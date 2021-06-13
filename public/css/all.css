@@ -212,7 +212,7 @@ template {
   display: none;
 }
 
-.header {
+header {
   display: flex;
   position: fixed;
   align-items: center;
@@ -299,4 +299,27 @@ template {
   .header-menu:after {
     height: 6px;
   }
+}
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #cbd5e0;
+}
+
+.footer-media {
+  display: flex;
+}
+.footer-media a {
+  text-decoration: none;
+  padding: 0.5rem;
+  transition: 0.35s;
+}
+.footer-media a img {
+  width: 30px;
+  height: 30px;
+}
+.footer-media a:hover {
+  opacity: 80%;
+  transition: 0.35s;
 }

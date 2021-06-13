@@ -1,0 +1,25 @@
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #cbd5e0;
+}
+
+.footer-media{
+    display: flex;
+    a{
+        text-decoration: none;
+        padding: 0.5rem;
+        transition: 0.35s;
+
+        img{
+            width: 30px;
+            height: 30px;
+        }
+
+        &:hover{
+            opacity: 80%;
+            transition: 0.35s;
+        }
+    }
+}
