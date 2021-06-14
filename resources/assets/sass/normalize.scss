@@ -17,10 +17,6 @@ body {
   margin: 0;
 }
 
-.wrap {
-    @include min-max(320px, 1024px, 15px);
-}
-
 main {
   display: block;
 }

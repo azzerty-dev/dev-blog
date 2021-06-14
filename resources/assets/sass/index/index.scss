@@ -8,13 +8,6 @@
     background-color: rgba(249, 249, 249, 0.9);
 }
 
-.title{
-    display: flex;
-    justify-content: center;
-    margin: 1rem;
-    font-weight: bold;
-}
-
 .index-content{
     display: flex;
     flex-direction: column;
@@ -80,17 +73,7 @@
 
 }
 
-@media (min-width: 425px) {
-    .index{
-        margin: 3.25rem 0 0.25rem 0;
-    }
-}
-
 @media (min-width: 768px) {
-    .index{
-        margin: 3.9rem 0 0.25rem 0;
-    }
-
     .index-post{
         a{
             p{
@@ -118,10 +101,5 @@
                 left: 7%;
             }
         }
-    }
-}
-@media (min-width: 1920px) {
-    .index{
-        margin: 4.5rem 0 0.25rem 0;
     }
 }

@@ -12,14 +12,6 @@ body {
   margin: 0;
 }
 
-.wrap {
-  min-width: 320px;
-  max-width: 1024px;
-  padding: 0 15px;
-  box-sizing: border-box;
-  margin: 0 auto;
-}
-
 main {
   display: block;
 }
@@ -220,6 +212,39 @@ template {
   display: none;
 }
 
+.title {
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+  font-weight: bold;
+}
+
+.wrap {
+  min-width: 320px;
+  max-width: 1024px;
+  padding: 0 15px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+@media (min-width: 425px) {
+  .wrap {
+    margin-top: 3.25rem;
+    margin-bottom: 0.25rem;
+  }
+}
+@media (min-width: 768px) {
+  .wrap {
+    margin-top: 3.9rem;
+    margin-bottom: 0.25rem;
+  }
+}
+@media (min-width: 1920px) {
+  .wrap {
+    margin-top: 4.5rem;
+    margin-bottom: 0.25rem;
+  }
+}
 header {
   z-index: 9999;
   display: flex;
@@ -343,13 +368,6 @@ footer {
   background-color: rgba(249, 249, 249, 0.9);
 }
 
-.title {
-  display: flex;
-  justify-content: center;
-  margin: 1rem;
-  font-weight: bold;
-}
-
 .index-content {
   display: flex;
   flex-direction: column;
@@ -410,16 +428,7 @@ footer {
   transition: 0.3s;
 }
 
-@media (min-width: 425px) {
-  .index {
-    margin: 3.25rem 0 0.25rem 0;
-  }
-}
 @media (min-width: 768px) {
-  .index {
-    margin: 3.9rem 0 0.25rem 0;
-  }
-
   .index-post a p {
     left: 17.5%;
   }
@@ -432,10 +441,5 @@ footer {
 @media (min-width: 1440px) {
   .index-post a p {
     left: 7%;
-  }
-}
-@media (min-width: 1920px) {
-  .index {
-    margin: 4.5rem 0 0.25rem 0;
   }
 }

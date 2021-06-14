@@ -1,0 +1,31 @@
+.title{
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+    font-weight: bold;
+}
+
+.wrap {
+    @include min-max(320px, 1024px, 15px);
+}
+
+@media (min-width: 425px) {
+    .wrap{
+        margin-top: 3.25rem;
+        margin-bottom: 0.25rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .wrap{
+        margin-top: 3.9rem;
+        margin-bottom:0.25rem;
+    }
+}
+
+@media (min-width: 1920px) {
+    .wrap{
+        margin-top: 4.5rem;
+        margin-bottom: 0.25rem;
+    }
+}
