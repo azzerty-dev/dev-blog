@@ -2,5 +2,7 @@
 
 @import "font";
 @import "normalize";
-@import "header";
-@import "footer";
+@import "base";
+@import "layouts/header";
+@import "layouts/footer";
+@import "index/index";

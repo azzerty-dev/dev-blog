@@ -12,6 +12,14 @@ body {
   margin: 0;
 }
 
+.wrap {
+  min-width: 320px;
+  max-width: 1024px;
+  padding: 0 15px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
 main {
   display: block;
 }
@@ -213,6 +221,7 @@ template {
 }
 
 header {
+  z-index: 9999;
   display: flex;
   position: fixed;
   align-items: center;
@@ -220,7 +229,7 @@ header {
   top: 0;
   width: 100%;
   transition: 0.25s;
-  background-color: #d4e2ea;
+  background-color: #EEF0F1;
 }
 
 .header-logo {
@@ -304,7 +313,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #cbd5e0;
+  background-color: #EEF0F1;
 }
 
 .footer-media {
@@ -320,6 +329,113 @@ footer {
   height: 30px;
 }
 .footer-media a:hover {
-  opacity: 80%;
+  opacity: 70%;
   transition: 0.35s;
+}
+
+.index {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 2.4rem;
+  border-style: ridge;
+  border-color: black;
+  background-color: rgba(249, 249, 249, 0.9);
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+  font-weight: bold;
+}
+
+.index-content {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin: 0 0.5rem 1rem 0.5rem;
+  font-weight: lighter;
+}
+.index-content ul {
+  margin-left: 1rem;
+}
+
+.index-posts {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.index-post {
+  display: flex;
+  margin: 1rem;
+}
+.index-post a {
+  position: relative;
+  text-decoration: none;
+}
+.index-post a:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 98%;
+  opacity: 0.4;
+  background: #000;
+  transition: 0.3s;
+}
+.index-post a:hover p {
+  color: white;
+}
+.index-post a:hover:before {
+  opacity: 0.8;
+  transition: 0.3s;
+}
+.index-post a img {
+  width: 250px;
+  height: 250px;
+  border-style: ridge;
+  border-color: black;
+}
+.index-post a p {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 49%;
+  bottom: 49%;
+  left: 24%;
+  color: rgba(255, 255, 255, 0.8);
+  transition: 0.3s;
+}
+
+@media (min-width: 425px) {
+  .index {
+    margin: 3.25rem 0 0.25rem 0;
+  }
+}
+@media (min-width: 768px) {
+  .index {
+    margin: 3.9rem 0 0.25rem 0;
+  }
+
+  .index-post a p {
+    left: 17.5%;
+  }
+}
+@media (min-width: 1024px) {
+  .index-post a p {
+    left: 13.5%;
+  }
+}
+@media (min-width: 1440px) {
+  .index-post a p {
+    left: 7%;
+  }
+}
+@media (min-width: 1920px) {
+  .index {
+    margin: 4.5rem 0 0.25rem 0;
+  }
 }

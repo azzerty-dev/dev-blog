@@ -1,11 +1,12 @@
 header{
+    z-index: 9999;
     display: flex;
     position: fixed;
     align-items: center;
     justify-content: space-around;
     top: 0; width: 100%;
     transition: 0.25s;
-    background-color: rgb(212, 226, 234);
+    background-color: #EEF0F1;
 }
 
 .header-logo{

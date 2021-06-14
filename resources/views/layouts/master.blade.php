@@ -26,7 +26,7 @@
     </div>
 </header>
 
-<section style="margin-top: 4rem">
+<section class="content wrap">
     @yield('content')
 </section>
 

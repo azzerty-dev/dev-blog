@@ -1,3 +1,10 @@
+@mixin min-max($min-width, $max-width, $padding) {
+    min-width: $min-width;
+    max-width: $max-width;
+    padding: 0 $padding;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
 
 html {
   line-height: 1.15; /* 1 */
@@ -8,6 +15,10 @@ body {
   font-size: calc(15px + (26 - 15) * ((100vw - 300px) / (1600 - 300)));
   font-family: 'Amiko', sans-serif;
   margin: 0;
+}
+
+.wrap {
+    @include min-max(320px, 1024px, 15px);
 }
 
 main {
