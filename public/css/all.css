@@ -384,6 +384,15 @@ footer {
   justify-content: center;
   flex-wrap: wrap;
 }
+.index-posts a {
+  text-decoration: none;
+  color: black;
+  transition: 0.3s;
+}
+.index-posts a:hover {
+  color: rgba(0, 0, 0, 0.7);
+  transition: 0.3s;
+}
 
 .index-post {
   display: flex;
@@ -442,4 +451,22 @@ footer {
   .index-post a p {
     left: 7%;
   }
+}
+.contacts {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-top: 2.4rem;
+  border-style: ridge;
+  border-color: black;
+}
+
+.contact-feedback {
+  display: flex;
+  margin-left: 2rem;
+}
+.contact-feedback input {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
 }

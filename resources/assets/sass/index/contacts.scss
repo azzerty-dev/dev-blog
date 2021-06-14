@@ -1,0 +1,20 @@
+.contacts{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 2.4rem;
+    border-style: ridge;
+    border-color: black;
+}
+
+.contact-feedback{
+    display: flex;
+    margin-left: 2rem;
+
+    input{
+        margin-top: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+}

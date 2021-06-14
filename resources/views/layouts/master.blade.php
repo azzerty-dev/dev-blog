@@ -11,7 +11,7 @@
 <body>
 
 <header>
-    <a class="header-logo" href="#">
+    <a class="header-logo" href="/">
         <img src="{{asset('/storage/logo.svg')}}" alt="">
     </a>
 
@@ -21,7 +21,7 @@
 
         <a href="#"> Блог </a>
 
-        <a href="#"> Контакты </a>
+        <a href="/contacts"> Контакты </a>
 
     </div>
 </header>

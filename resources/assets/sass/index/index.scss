@@ -24,6 +24,17 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+
+    a{
+        text-decoration: none;
+        color: black;
+        transition: 0.3s;
+
+        &:hover{
+            color: rgba(0, 0, 0, 0.7);
+            transition: 0.3s;
+        }
+    }
 }
 
 .index-post{
@@ -92,7 +103,6 @@
         }
     }
 }
-
 
 @media (min-width: 1440px) {
     .index-post{
