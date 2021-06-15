@@ -384,15 +384,6 @@ footer {
   justify-content: center;
   flex-wrap: wrap;
 }
-.index-posts a {
-  text-decoration: none;
-  color: black;
-  transition: 0.3s;
-}
-.index-posts a:hover {
-  color: rgba(0, 0, 0, 0.7);
-  transition: 0.3s;
-}
 
 .index-post {
   display: flex;
@@ -437,6 +428,19 @@ footer {
   transition: 0.3s;
 }
 
+.index-more {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  color: black;
+  transition: 0.3s;
+  margin-bottom: 1rem;
+}
+.index-more:hover {
+  color: rgba(0, 0, 0, 0.7);
+  transition: 0.3s;
+}
+
 @media (min-width: 768px) {
   .index-post a p {
     left: 17.5%;
@@ -454,19 +458,52 @@ footer {
 }
 .contacts {
   display: flex;
-  justify-content: center;
   flex-direction: column;
-  flex-wrap: wrap;
   margin-top: 2.4rem;
   border-style: ridge;
   border-color: black;
+  background-color: #FAFAFA;
 }
 
 .contact-feedback {
+  position: relative;
   display: flex;
-  margin-left: 2rem;
+  justify-content: space-around;
 }
 .contact-feedback input {
   margin-top: 0.5rem;
   margin-bottom: 1rem;
+}
+
+.contacts-links {
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 3.5rem;
+}
+
+.contacts-link {
+  margin-top: 1rem;
+}
+.contacts-link a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  transition: 0.3s;
+}
+.contacts-link a:hover {
+  color: rgba(0, 0, 0, 0.7);
+  transition: 0.3s;
+}
+.contacts-link img {
+  margin-right: 0.5rem;
+  width: 35px;
+  height: 35px;
+}
+
+@media (min-width: 768px) {
+  .contacts-links {
+    display: flex;
+  }
 }

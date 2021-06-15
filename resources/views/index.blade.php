@@ -75,8 +75,7 @@
                     <p>Тестовое название</p>
                 </a>
             </div>
-
-            <a href="">Смотреть всё &#8594;</a>
         </div>
+        <a class="index-more" href="">Смотреть всё &#8594;</a>
     </div>
 @endsection
