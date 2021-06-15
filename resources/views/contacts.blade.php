@@ -10,7 +10,8 @@
         </div>
 
         <div class="contact-feedback">
-            <form action="/action_page.php">
+            <form action="/" method="post">
+                @csrf
                 <label for="Name">Имя</label><br>
                 <input type="text" id="Name" name="Name"><br>
                 <label for="Theme">Тема</label><br>
@@ -31,20 +32,26 @@
                 </div>
 
                 <div class="contacts-link">
-                    <a href="">
+                    <a href="mailto:azzertys@protonmail.com">
                         <img src="{{ asset('/storage/mail-icon.svg') }}" alt="">
                         azzertys@protonmail.com
                     </a>
                 </div>
 
                 <div class="contacts-link">
-                    <a href="">
+                    <a href="https://github.com/azzerty-dev">
                         <img src="{{ asset('/storage/github-icon.svg') }}" alt="">
                         azzerty-dev
                     </a>
                 </div>
             </div>
-
         </div>
 
+        @if($errors->any())
+            <ul class="errors">
+                @foreach($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        @endif
 @endsection

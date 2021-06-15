@@ -502,6 +502,10 @@ footer {
   height: 35px;
 }
 
+.errors li {
+  margin-top: 0.25rem;
+}
+
 @media (min-width: 768px) {
   .contacts-links {
     display: flex;

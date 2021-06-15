@@ -17,9 +17,9 @@
 
     <div class="header-menu">
 
-        <a href="#"> Проекты </a>
+        <a href="/blog"> Блог </a>
 
-        <a href="#"> Блог </a>
+        <a href="/projects"> Проекты </a>
 
         <a href="/contacts"> Контакты </a>
 
@@ -33,9 +33,9 @@
 
 <footer>
     <div class="footer-media">
-        <a href=""> <img src="{{asset('/storage/github-icon.svg')}}" alt=""> </a>
+        <a href="https://github.com/azzerty-dev"> <img src="{{asset('/storage/github-icon.svg')}}" alt=""> </a>
         <a href=""> <img src="{{asset('/storage/telegram-icon.svg')}}" alt=""> </a>
-        <a href=""> <img src="{{asset('/storage/mail-icon.svg')}}" alt=""> </a>
+        <a href="mailto:azzertys@protonmail.com"> <img src="{{asset('/storage/mail-icon.svg')}}" alt=""> </a>
     </div>
 </footer>
 <script src="{{asset('/js/app.js')}}"></script>
