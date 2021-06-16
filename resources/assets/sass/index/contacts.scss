@@ -57,10 +57,15 @@
     }
 }
 
-.errors{
+.contacts-errors{
     li{
         margin-top: 0.25rem;
     }
+}
+
+.contacts-submit{
+    text-align: center;
+    padding: 1rem;
 }
 
 @media (min-width: 768px) {

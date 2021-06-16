@@ -18,5 +18,8 @@ class ContactsController extends Controller
 
         $contacts->save();
 
+        $data->session()->flash('submit', 'Ваша заявка успешна отпралена!');
+
+        return redirect()->route('contacts');
     }
 }

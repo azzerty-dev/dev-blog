@@ -10,7 +10,7 @@
         </div>
 
         <div class="contact-feedback">
-            <form action="/" method="post">
+            <form action="{{ 'contacts-send' }}" method="post">
                 @csrf
                 <label for="Name">Имя</label><br>
                 <input type="text" id="Name" name="Name"><br>
@@ -47,8 +47,12 @@
             </div>
         </div>
 
-        @if($errors->any())
-            <ul class="errors">
+        <div class="contacts-submit">
+            {{ Session::get('submit') }}
+        </div>
+
+    @if($errors->any())
+            <ul class="contacts-errors">
                 @foreach($errors->all() as $error)
                     <li>{{ $error }}</li>
                 @endforeach
