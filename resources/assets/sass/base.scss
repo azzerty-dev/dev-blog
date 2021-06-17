@@ -6,7 +6,7 @@
 }
 
 .wrap {
-    @include min-max(320px, 1024px, 15px);
+    @include min-max(320px, 1124px, 15px);
 }
 
 @media (min-width: 425px) {
