@@ -22,7 +22,7 @@
             <input type="submit" value="Регистрация">
         </form>
         @if($errors->any())
-            <ul class="contacts-errors">
+            <ul class="login-errors">
                 @foreach($errors->all() as $error)
                     <li>{{ $error }}</li>
                 @endforeach

@@ -2,22 +2,25 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\RegisterRequest;
 use App\Models\User;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class RegisterController extends Controller
 {
-    public function save(Request $request){
+    public function index(RegisterRequest $request){
 
         if (Auth::check()){
             return redirect(route('dashboard'));
         }
 
-        $validateFields = $request->validate([
-            'email' => 'required|email',
-            'password' => 'required'
-        ]);
+        $validateFields = $request->all();
+
+        if (User::where('email', $validateFields['email'])->exists()){
+           return redirect(route('register'))->withErrors([
+                'email' => 'Такой пользователь уже существует'
+            ]);
+        }
 
         $user = User::create($validateFields);
         if ($user){
