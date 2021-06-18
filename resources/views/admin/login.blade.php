@@ -15,12 +15,19 @@
     <div class="login-form">
         <form action="{{ 'login' }}" method="post">
             @csrf
-            <label for="Login">Логин</label><br>
-            <input type="text" id="Login" name="Login"><br>
-            <label for="Password">Пароль</label><br>
+            <label for="email">email</label><br>
+            <input type="text" id="email" name="email"><br>
+            <label for="password">Пароль</label><br>
             <input type="password" id="password" name="password"><br>
             <input type="submit" value="Вход">
         </form>
+        @if($errors->any())
+            <ul class="login-errors">
+                @foreach($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        @endif
     </div>
 </div>
 </body>

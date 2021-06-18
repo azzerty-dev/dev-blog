@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\RegisterController;
+use \App\Http\Controllers\LoginController;
 
 Route::view('dashboard', 'admin.dashboard')->middleware('auth')->name('dashboard');
 
@@ -23,7 +24,7 @@ Route::get('login', function (){
 
    return view('admin.login');
 })->name('login');
-//Route::post('login', [])->name('login');
+Route::post('login', [LoginController::class , 'index'])->name('login');
 
 Route::get('logout', function (){
     Auth::logout();
