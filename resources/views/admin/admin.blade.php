@@ -13,7 +13,7 @@
 
 <div class="login">
     <div class="login-form">
-        <form action="{{ 'login' }}" method="post">
+        <form action="{{ 'admin' }}" method="post">
             @csrf
             <label for="email">email</label><br>
             <input type="text" id="email" name="email"><br>

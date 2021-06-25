@@ -6,25 +6,25 @@ use \App\Http\Controllers\LoginController;
 
 Route::view('dashboard', 'admin.dashboard')->middleware('auth')->name('dashboard');
 
-Route::get('register', function (){
+//Route::get('register', function (){
+//
+//    if (Auth::check()){
+//        return redirect(route('dashboard'));
+//    }
+//
+//    return view('admin.register');
+//})->name('register');
+//Route::post('register', [RegisterController::class , 'index'])->name('register');
+
+Route::get('admin', function (){
 
     if (Auth::check()){
         return redirect(route('dashboard'));
     }
 
-    return view('admin.register');
-})->name('register');
-Route::post('register', [RegisterController::class , 'index'])->name('register');
-
-Route::get('login', function (){
-
-    if (Auth::check()){
-        return redirect(route('dashboard'));
-    }
-
-   return view('admin.login');
-})->name('login');
-Route::post('login', [LoginController::class , 'index'])->name('login');
+   return view('admin.admin');
+})->name('admin');
+Route::post('admin', [LoginController::class , 'index'])->name('admin');
 
 Route::get('logout', function (){
     Auth::logout();

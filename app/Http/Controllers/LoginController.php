@@ -15,7 +15,7 @@ class LoginController extends Controller
             return redirect()->intended('dashboard');
         }
 
-        return redirect('login')->withErrors([
+        return redirect('admin')->withErrors([
             'email' => 'не удалось авторизоваться',
         ]);
     }
