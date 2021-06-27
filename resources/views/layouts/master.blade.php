@@ -17,11 +17,11 @@
 
     <div class="header-menu">
 
-        <a href="/blog"> Блог </a>
+        <a href="{{ route('blog') }}"> Блог </a>
 
-        <a href="/projects"> Проекты </a>
+        <a href="{{ route('projects') }}"> Проекты </a>
 
-        <a href="/contacts"> Контакты </a>
+        <a href="{{ route('contacts') }}"> Контакты </a>
 
     </div>
 </header>
@@ -38,7 +38,8 @@
         <a href="mailto:azzertys@protonmail.com"> <img src="{{asset('/storage/mail-icon.svg')}}" alt=""> </a>
     </div>
 </footer>
-<script src="{{asset('/js/app.js')}}"></script>
+<script src="{{asset('/js/main.js')}}"></script>
+{{--<script src="{{asset('/js/app.js')}}"></script>--}}
 </body>
 
 </html>

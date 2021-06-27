@@ -3,7 +3,6 @@
 @section('title', 'Контакты')
 
 @section('content')
-
     <div class="contacts">
         <div class="title">
             Контакты
