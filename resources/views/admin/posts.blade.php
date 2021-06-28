@@ -42,4 +42,8 @@
         @endforeach
         </tbody>
     </table>
+
+    <div class="paginate">
+        {{ $post->links() }}
+    </div>
 @endsection

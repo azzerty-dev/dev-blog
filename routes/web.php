@@ -2,8 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactsController;
+use \App\Http\Controllers\IndexController;
 
-Route::view('/', 'index')->name('index');
+Route::get('/', [IndexController::class, 'index'])->name('index');
 
 Route::view('blog','blog')->name('blog');
 

@@ -28,7 +28,6 @@ class PostRequest extends FormRequest
             'body'=>'required',
             'status'=>'required',
             'image'=>'required',
-//            'slug'=>'required|unique:App\Models\Posts,slug',
         ];
     }
 
@@ -39,8 +38,6 @@ class PostRequest extends FormRequest
             'body.required'=>'Поле содержание является обязательным.',
             'status.required'=>'Поле статус является обязательным.',
             'image.required'=>'Поле изображение является обязательным.',
-
-//            'slug.unique'=>'Поле slug должно быть уникальным',
         ];
     }
 }

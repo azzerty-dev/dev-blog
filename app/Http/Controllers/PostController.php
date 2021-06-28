@@ -26,7 +26,6 @@ class PostController extends Controller
         $post->status = $request->input('status');
         $post->image = $request->file('image')->store('post-content');
         $post->slug = Str::slug($request->title, '-');
-        $post->slug = $this->validate();
         $post->save();
 
         return redirect()->route('posts');
