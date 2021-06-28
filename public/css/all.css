@@ -545,6 +545,18 @@ footer {
   margin: 1rem 0.5rem 1rem 1rem;
 }
 
+.td-img {
+  width: 120px;
+  height: 120px;
+}
+
+tr {
+  text-align: center;
+}
+tr td {
+  vertical-align: middle;
+}
+
 .create-post {
   padding: 3rem;
 }
@@ -558,14 +570,12 @@ footer {
   justify-content: right;
 }
 
-.td-img {
-  width: 140px;
-  height: 80px;
+.post-create-table label {
+  margin: 0.5rem 0 0 0;
 }
-
-tr {
-  text-align: center;
+.post-create-table input {
+  margin: 0.5rem 0 0.5rem 0;
 }
-tr td {
-  vertical-align: middle;
+.post-create-table select {
+  margin: 0.5rem 0 0.5rem 0;
 }

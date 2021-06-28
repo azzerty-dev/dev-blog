@@ -24,35 +24,22 @@
         </thead>
 
         <tbody>
-        <tr>
-            <td> <input id="checkbox" type="checkbox"> </td>
-            <td> 1 </td>
-            <td> Тестовое название</td>
-            <td> <img class="td-img" src="{{asset('/storage/test-1.jpg')}}" alt=""> </td>
-            <td> Опубликованно </td>
-            <td> 21.02.12</td>
-            <td> 21.02.12 </td>
-            <td>
-                <button type="button" class="btn btn-warning">Посмотреть</button>
-                <button type="button" class="btn btn-info">Изменить</button>
-                <button type="button" class="btn btn-danger">Удалить</button>
-            </td>
-        </tr>
-
-        <tr>
-            <td> <input id="checkbox" type="checkbox"> </td>
-            <td> 1 </td>
-            <td> Тестовое название</td>
-            <td> <img class="td-img" src="{{asset('/storage/test-1.jpg')}}" alt=""> </td>
-            <td> Опубликованно </td>
-            <td> 21.02.12</td>
-            <td> 21.02.12 </td>
-            <td>
-                <button type="button" class="btn btn-warning">Посмотреть</button>
-                <button type="button" class="btn btn-info">Изменить</button>
-                <button type="button" class="btn btn-danger">Удалить</button>
-            </td>
-        </tr>
+        @foreach($post as $post_content)
+            <tr>
+                <td> <input id="checkbox" type="checkbox"> </td>
+                <td> {{$post_content->id}} </td>
+                <td> {{$post_content->title}} </td>
+                <td> <img class="td-img" src="{{$post_content->image}}" alt=""> </td>
+                <td> {{$post_content->status}} </td>
+                <td> {{$post_content->created_at}} </td>
+                <td> {{$post_content->updated_at}} </td>
+                <td>
+                    <button type="button" class="btn btn-warning">Посмотреть</button>
+                    <button type="button" class="btn btn-info">Изменить</button>
+                    <button type="button" class="btn btn-danger">Удалить</button>
+                </td>
+            </tr>
+        @endforeach
         </tbody>
     </table>
 @endsection

@@ -15,22 +15,23 @@ Route::middleware('auth')->group(function (){
         Route::get('create', function (){
             return view('admin.post-create');
         })->name('post-create');
-        Route::post('create-post', [PostController::class, 'addingPost'])->name('create-post');
+
+        Route::post('create-post', [PostController::class, 'createPost'])->name('create-post');
 
     });
 
 });
 
-Route::get('admin', function (){
+Route::get('login', function (){
 
     if (Auth::check()){
         return redirect(route('dashboard'));
     }
 
-   return view('admin.admin');
-})->name('admin');
+   return view('admin.login');
+})->name('login');
 
-Route::post('admin', [LoginController::class , 'index'])->name('admin');
+Route::post('login', [LoginController::class , 'index'])->name('login');
 
 Route::get('logout', function (){
     Auth::logout();

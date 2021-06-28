@@ -26,7 +26,7 @@
         <div class="col-md-3 left_col">
             <div class="left_col scroll-view">
                 <div class="navbar nav_title" style="border: 0;">
-                    <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>Админ панель</span></a>
+                    <a href="{{'dashboard'}}" class="site_title"><i class="fa fa-paw"></i> <span>Админ панель</span></a>
                 </div>
 
                 <div class="clearfix"></div>
@@ -47,10 +47,10 @@
                     <div class="menu_section">
                         <h3>Live On</h3>
                         <ul class="nav side-menu">
-                            <li><a><i class="fa fa-bug"></i> Additional Pages <span class="fa fa-chevron-down"></span></a>
+                            <li><a><i class="fa fa-bug"></i> Посты <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
                                     <li><a href="{{ route('posts') }}">Посты</a></li>
-                                    <li><a href="projects.html">Projects</a></li>
+                                    <li><a href="projects.html">Проекты</a></li>
                                     <li><a href="project_detail.html">Project Detail</a></li>
                                     <li><a href="contacts.html">Contacts</a></li>
                                     <li><a href="profile.html">Profile</a></li>
