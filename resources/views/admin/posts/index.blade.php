@@ -5,7 +5,7 @@
 @section('content')
 
     <img class="icon" src="{{asset('/storage/post-icon.svg')}}" alt="">
-    <a href="{{asset(route('post-create'))}}">
+    <a href="{{ route( 'posts.create' ) }}">
         <button type="button" class="btn btn-success">Добавить пост</button>
     </a>
 
@@ -24,18 +24,21 @@
         </thead>
 
         <tbody>
-        @foreach($post as $post_content)
+        @foreach($posts as $post)
             <tr>
                 <td> <input id="checkbox" type="checkbox"> </td>
-                <td> {{$post_content->id}} </td>
-                <td> {{$post_content->title}} </td>
-                <td> <img class="td-img" src="{{$post_content->image}}" alt=""> </td>
-                <td> {{$post_content->status}} </td>
-                <td> {{$post_content->created_at}} </td>
-                <td> {{$post_content->updated_at}} </td>
+                <td> {{$post->id}} </td>
+                <td> {{$post->title}} </td>
+                <td> <img class="td-img" src="{{$post->image}}" alt=""> </td>
+                <td> {{$post->status}} </td>
+                <td> {{$post->created_at}} </td>
+                <td> {{$post->updated_at}} </td>
                 <td>
-                    <button type="button" class="btn btn-warning">Посмотреть</button>
-                    <button type="button" class="btn btn-info">Изменить</button>
+                    <button  type="button" class="btn btn-warning">Посмотреть</button>
+                    <a href="">
+{{--                        {{ route('posts.edit') }}--}}
+                        <button type="button" class="btn btn-info">Изменить</button>
+                    </a>
                     <button type="button" class="btn btn-danger">Удалить</button>
                 </td>
             </tr>
@@ -44,6 +47,6 @@
     </table>
 
     <div class="paginate">
-        {{ $post->links() }}
+        {{ $posts->links() }}
     </div>
 @endsection

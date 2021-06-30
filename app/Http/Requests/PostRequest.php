@@ -11,8 +11,8 @@ class PostRequest extends FormRequest
      *
      * @return bool
      */
-    public function authorize()
-    {
+    public function authorize(){
+
         return true;
     }
 
@@ -21,8 +21,8 @@ class PostRequest extends FormRequest
      *
      * @return array
      */
-    public function rules()
-    {
+    public function rules(){
+
         return [
             'title'=>'required',
             'body'=>'required',
@@ -31,10 +31,10 @@ class PostRequest extends FormRequest
         ];
     }
 
-    public function messages()
-    {
+    public function messages(){
+
         return[
-            'title.required'=>'Поле название является обязательным.',
+            'title.required'=>'Поле Заголовок является обязательным.',
             'body.required'=>'Поле содержание является обязательным.',
             'status.required'=>'Поле статус является обязательным.',
             'image.required'=>'Поле изображение является обязательным.',

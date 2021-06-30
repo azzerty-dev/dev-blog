@@ -7,7 +7,9 @@
     <script src="https://cdn.tiny.cloud/1/u260oscud6f2uzr549nri7lttpfkn27kc6a2brg7p4uhi0vj/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 
     <div class="create-post">
-        <form action="{{ ('create-post') }}" method="post" enctype="multipart/form-data">
+        <form action="{{ route('posts.store')}}" method="post" enctype="multipart/form-data">
+
+            @csrf
             @if($errors->any())
                 <ul class="contacts-errors">
                     @foreach($errors->all() as $error)
@@ -15,7 +17,7 @@
                     @endforeach
                 </ul>
             @endif
-            @csrf
+
             <div class="mb-3 post-create-table">
                 <label for="title" class="form-label">Заголовок</label>
                 <input name="title" class="form-control" type="text" aria-label="default input example">
@@ -37,7 +39,7 @@
 
                 <div>
                 <label for="status" class="form-label">Статус</label>
-                <select name="status" class="form-select" aria-label="Default select example">
+                <select name="status" class="form-select" aria-label="Default select example" >
                     <option value="PUBLISHED">PUBLISHED</option>
                     <option value="DRAFT">DRAFT</option>
                     <option value="PENDING">PENDING</option>

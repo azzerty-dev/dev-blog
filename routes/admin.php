@@ -8,17 +8,7 @@ use \App\Http\Controllers\PostController;
 Route::middleware('auth')->group(function (){
     Route::view('dashboard', 'admin.dashboard')->name('dashboard');
 
-    Route::prefix('posts')->group(function (){
-
-        Route::get('/', [PostController::class, 'Post'])->name('posts');
-
-        Route::get('create', function (){
-            return view('admin.post-create');
-        })->name('post-create');
-
-        Route::post('create-post', [PostController::class, 'createPost'])->name('create-post');
-
-    });
+    Route::resource('posts', PostController::class);
 
 });
 
