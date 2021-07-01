@@ -9,8 +9,7 @@ class IndexController extends Controller
 {
     public function index(){
 
-        $posts = DB::table('posts')->limit(6)->get();
-        return view('index', compact('posts'));
+        return view('index');
 
     }
 }

@@ -13,16 +13,18 @@ class CreatePostsTable extends Migration
      */
     public function up()
     {
-        Schema::create('posts', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('title');
-            $table->text('body');
-            $table->string('image')->nullable();
-            $table->string('slug')->unique();
-            $table->string('project');
-            $table->enum('status', ['PUBLISHED', 'DRAFT', 'PENDING'])->default('DRAFT');
-            $table->timestamps();
-        });
+        {
+            Schema::create('posts', function (Blueprint $table) {
+                $table->id();
+                $table->string('title');
+                $table->text('body');
+                $table->string('image')->nullable();
+                $table->string('slug')->unique();
+                $table->string('project');
+                $table->enum('status', ['PUBLISHED', 'DRAFT', 'PENDING'])->default('DRAFT');
+                $table->timestamps();
+            });
+        }
     }
 
     /**

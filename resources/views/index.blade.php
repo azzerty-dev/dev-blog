@@ -33,14 +33,14 @@
         <div class="title">Последние посты</div>
 
         <div class="index-posts">
-            @foreach($posts as $post_content)
+            {{-- @foreach($posts as $post_content)
             <div class="index-post">
                 <a href="">
                     <img src="{{ $post_content->image }}" alt="">
                     <p>{{$post_content->title}}</p>
                 </a>
             </div>
-            @endforeach
+            @endforeach --}}
         </div>
 
         <a class="index-more" href="">Смотреть всё&#8594;</a>
