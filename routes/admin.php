@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
 
 Route::middleware('auth')->group(function (){
     Route::view('dashboard', 'admin.dashboard')->name('dashboard');
