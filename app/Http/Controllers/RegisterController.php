@@ -8,7 +8,15 @@ use Illuminate\Support\Facades\Auth;
 
 class RegisterController extends Controller
 {
-    public function index(RegisterRequest $request){
+    public function registerCheck(){
+        if (Auth::check()){
+            return redirect(route('dashboard'));
+        }
+        return view('admin.register');
+    }
+
+
+    public function register(RegisterRequest $request){
 
         if (Auth::check()){
             return redirect(route('dashboard'));

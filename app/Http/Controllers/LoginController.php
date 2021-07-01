@@ -8,6 +8,19 @@ use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
+    public function logout(){
+        Auth::logout();
+        return redirect('/');
+    }
+
+    public function loginCheck(){
+        if (Auth::check()){
+            return redirect(route('dashboard'));
+        }
+
+       return view('admin.login');
+    }
+
     public function login(RegisterRequest $request){
         $formFields = $request->only(['email', 'password']);
 
