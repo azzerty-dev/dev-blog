@@ -18,7 +18,7 @@ Route::get('login', function (){
    return view('admin.login');
 })->name('login');
 
-Route::post('login', [LoginController::class , 'index'])->name('login');
+Route::post('login', [LoginController::class , 'login'])->name('login');
 
 Route::get('logout', function (){
     Auth::logout();

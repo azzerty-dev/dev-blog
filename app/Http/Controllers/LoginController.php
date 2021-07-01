@@ -8,14 +8,14 @@ use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
-    public function index(RegisterRequest $request){
+    public function login(RegisterRequest $request){
         $formFields = $request->only(['email', 'password']);
 
         if (Auth::attempt($formFields)){
             return redirect()->intended('dashboard');
         }
 
-        return redirect('admin')->withErrors([
+        return redirect(('login'))->withErrors([
             'email' => 'не удалось авторизоваться',
         ]);
     }
