@@ -544,3 +544,8 @@ footer {
   height: 50px;
   margin: 1rem 0.5rem 1rem 1rem;
 }
+
+.post-image {
+  height: 120px;
+  width: 120px;
+}

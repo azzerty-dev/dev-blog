@@ -12,12 +12,12 @@
     <title> @yield('title') </title>
 
     <!-- Bootstrap -->
-    {{--    <link href="{{ asset('/vendors/bootstrap/dist/css/bootstrap.min.css')}}" rel="stylesheet">--}}
+       {{-- <link href="{{ asset('/vendors/bootstrap/dist/css/bootstrap.min.css')}}" rel="stylesheet"> --}}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- Font Awesome -->
-    <link href="{{ asset('/vendors/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">
+    <link href="/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- Custom Theme Style -->
-    <link href="{{asset('/build/css/custom.min.css')}}" rel="stylesheet">
+    <link href="/build/css/custom.min.css" rel="stylesheet">
 </head>
 
 <body class="nav-md">
@@ -49,7 +49,7 @@
                         <ul class="nav side-menu">
                             <li><a><i class="fa fa-bug"></i> Посты <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
-                                    <li><a href="">Посты</a></li>
+                                    <li><a href="{{ route('posts.index') }}">Посты</a></li>
                                     <li><a href="projects.html">Проекты</a></li>
                                     <li><a href="project_detail.html">Project Detail</a></li>
                                     <li><a href="contacts.html">Contacts</a></li>
@@ -112,13 +112,13 @@
 </div>
 
 <!-- jQuery -->
-<script src="{{asset('/vendors/jquery/dist/jquery.min.js')}}"></script>
+<script src="/vendors/jquery/dist/jquery.min.js"></script>
 <!-- Bootstrap -->
-<script src="{{asset('/vendors/bootstrap/dist/js/bootstrap.bundle.min.js')}}"></script>
+<script src="/vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <!-- Custom Theme Scripts -->
-<script src="{{asset('/build/js/custom.min.js')}}"></script>
+<script src="/build/js/custom.min.js"></script>
 
-<script src="{{asset('/js/admin.js')}}"></script>
+<script src="/js/admin.js"></script>
 </body>
 </html>
 

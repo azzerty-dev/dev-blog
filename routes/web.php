@@ -6,10 +6,10 @@ use \App\Http\Controllers\IndexController;
 
 Route::get('/', [IndexController::class, 'index'])->name('index');
 
-Route::view('index.blog','blog')->name('blog');
+Route::view('blog','index.blog')->name('blog');
 
-Route::view('index.projects','projects')->name('projects');
+Route::view('projects','index.projects')->name('projects');
 
-Route::view('index.contacts','contacts')->name('contacts');
+Route::view('contacts','index.contacts')->name('contacts');
 
 Route::post('contacts-send', [ContactsController::class , 'submit' ])->name('contacts-send');
