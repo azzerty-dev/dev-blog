@@ -545,10 +545,6 @@ footer {
   margin: 1rem 0.5rem 1rem 1rem;
 }
 
-.post-create-icon {
-  font-size: 50px;
-}
-
 .table th {
   text-align: center;
 }
@@ -565,4 +561,19 @@ footer {
   display: flex;
   justify-content: center;
   margin: 1rem;
+}
+
+.alert h5 {
+  text-align: center;
+}
+
+.action {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.post-create-icon {
+  font-size: 50px;
 }

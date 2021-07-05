@@ -11,9 +11,9 @@
         action="{{ route('posts.store') }}"
     @endif
     >
-        {{-- @isset($post)
+        @isset($post)
             @method('PUT')
-        @endisset --}}
+        @endisset
 
         @csrf
         <div class="mb-3">

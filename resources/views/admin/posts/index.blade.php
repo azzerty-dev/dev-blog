@@ -5,7 +5,6 @@
 @section('content')
 
 <div class="post-create">
-
     <span class="post-create-icon">
         <i class="fas fa-paste"></i>
     </span>
@@ -16,13 +15,21 @@
         </button>
     </a>
 
+    <div class="alert">
+        @if(session('success'))
+            <div class="alert alert-success"><h5>{{ session('success') }}</h5></div>
+        @endisset
+
+        @if(session('danger'))
+        <div class="alert alert-danger"><h5>{{ session('danger') }}</h5></div>
+    @endisset
+    </div>
 </div>
 
 <table class="table">
 
     <thead>
       <tr>
-        <th><input type="checkbox" onclick="selectAll(this)"></th>
         <th scope="col">id</th>
         <th scope="col">Название</th>
         <th scope="col">Фото</th>
@@ -37,7 +44,6 @@
     <tbody>
         @foreach ($posts as $post )
             <tr>
-                <td><input type="checkbox"></td>
                 <td scope="row">{{ $post->id }}</td>
                 <td>{{ $post->title }}</td>
                 <td>
@@ -48,11 +54,17 @@
                 <td>{{ $post->created_at }}</td>
                 <td>{{ $post->updated_at }}</td>
                 <td>
-                    <a class="btn btn-info" href="{{ route('posts.edit', $post) }}">Смотреть</a>
-                    <br>
-                    <a class="btn btn-primary" href="{{ route('posts.edit', $post) }}">Изменить</a>
-                    <br>
-                    <a class="btn btn-danger" href="{{ route('posts.edit', $post) }}">Удалить</a>
+                    <div class="action">
+                        <a href="{{ route('posts.edit', $post) }}"><button class="btn btn-info">Смотреть</button></a>
+                        <br>
+                        <a href="{{ route('posts.edit', $post) }}"><button class="btn btn-primary">Изменить</button></a>
+                        <br>
+                        <form method="POST" action="{{ route('posts.destroy', $post) }}">
+                            @csrf
+                            @method('DELETE')
+                            <button class="btn btn-danger" type="submit">Удалить</button>
+                        </form>
+                    </div>
                 </td>
             </tr>
         @endforeach

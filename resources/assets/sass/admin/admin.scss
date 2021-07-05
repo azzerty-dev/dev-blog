@@ -27,3 +27,38 @@
     height: 50px;
     margin: 1rem 0.5rem 1rem 1rem;
 }
+
+.table{
+    th{
+        text-align: center;
+    }
+
+    td{
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .table-image{
+        height: 120px;
+        width: 120px;
+    }
+}
+
+.paginate{
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+}
+
+.alert{
+    h5{
+        text-align: center;
+    }
+}
+
+.action{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}

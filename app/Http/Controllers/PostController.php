@@ -16,7 +16,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::orderBy("created_at", "desc")->paginate(5);
+        $posts = Post::orderBy("created_at", "desc")->paginate(9);
         return view('admin.posts.index', compact('posts'));
     }
 
@@ -47,7 +47,7 @@ class PostController extends Controller
         $post->slug = Str::slug($request->title, '-');
         $post->save();
 
-        return redirect()->route('posts.index');
+        return redirect()->route('posts.index')->withSuccess('Пост создан');
     }
 
     /**
@@ -89,7 +89,7 @@ class PostController extends Controller
         $post->slug = Str::slug($request->title, '-');
         $post->save();
 
-        return redirect()->route('posts.index');
+        return redirect()->route('posts.index')->withSuccess('Пост обновлён');
     }
 
     /**
@@ -100,6 +100,7 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
-        //
+        $post->delete();
+        return redirect()->route('posts.index')->withDanger('Пост удалён');
     }
 }
