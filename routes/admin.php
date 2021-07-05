@@ -17,4 +17,6 @@ Route::middleware('auth')->group(function (){
     Route::view('dashboard', 'admin.dashboard')->name('dashboard');
 
     Route::resource('posts', PostController::class);
+
+    Route::view('/test', 'admin.posts.test1');
 });

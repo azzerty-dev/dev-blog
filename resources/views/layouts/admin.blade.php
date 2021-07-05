@@ -15,11 +15,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- Custom Theme Style -->
     <link href="/build/css/custom.min.css" rel="stylesheet">
-
-
-
+    <!-- datatables -->
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs5/dt-1.10.25/datatables.min.css"/>
-
 
 </head>
 
@@ -115,16 +112,17 @@
 </div>
 
 <!-- jQuery -->
-<script src="/vendors/jquery/dist/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 <script src="/vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <!-- Custom Theme Scripts -->
-<script src="/build/js/custom.min.js"></script>
+<script src="/build/js/custom.js"></script>
 <!-- FontAwesome -->
 <script src="https://kit.fontawesome.com/275ba3f976.js" crossorigin="anonymous"></script>
 
-<script src="/js/admin.js"></script>
+<script src="https://cdn.tiny.cloud/1/dwsihrpm11ch36ljzdoesjotjkuyp4l7dy00d6q4flw780wt/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 
+<script src="/js/admin.js"></script>
 <script type="text/javascript" src="https://cdn.datatables.net/v/bs5/dt-1.10.25/datatables.min.js"></script>
 </body>
 </html>

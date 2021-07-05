@@ -5,7 +5,7 @@
 @section('content')
 
     <div class="title">
-        Проэкты
+        Проекты
     </div>
 
 @endsection

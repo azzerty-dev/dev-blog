@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('title', 'Посты');
+@section('title', 'Посты')
 
 @section('content')
 
@@ -55,11 +55,9 @@
                 <td>{{ $post->updated_at }}</td>
                 <td>
                     <div class="action">
-                        <a href="{{ route('posts.edit', $post) }}"><button class="btn btn-info">Смотреть</button></a>
-                        <br>
-                        <a href="{{ route('posts.edit', $post) }}"><button class="btn btn-primary">Изменить</button></a>
-                        <br>
-                        <form method="POST" action="{{ route('posts.destroy', $post) }}">
+                        <form method="POST" action="{{ asset(route('posts.destroy', $post)) }}">
+                            <a href="{{ asset(route('posts.edit', $post)) }}"><button class="btn btn-info">Смотреть</button></a>
+                            <a href="{{ asset(route('posts.edit', $post)) }}"><button class="btn btn-primary">Изменить</button></a>
                             @csrf
                             @method('DELETE')
                             <button class="btn btn-danger" type="submit">Удалить</button>

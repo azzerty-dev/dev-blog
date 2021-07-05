@@ -552,10 +552,6 @@ footer {
   text-align: center;
   vertical-align: middle;
 }
-.table .table-image {
-  height: 120px;
-  width: 120px;
-}
 
 .paginate {
   display: flex;
@@ -573,7 +569,15 @@ footer {
   flex-direction: row;
   flex-wrap: wrap;
 }
+.action a, .action button {
+  margin: 0.2rem 0.05rem 0 0.05rem;
+}
 
 .post-create-icon {
   font-size: 50px;
+}
+
+.table-image {
+  height: 200px;
+  width: 200px;
 }
