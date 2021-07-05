@@ -4,9 +4,22 @@
 
 @section('content')
 
-<a href="{{ route('posts.create') }}"><button type="button" class="btn btn-success">Создать</button></a>
+<div class="post-create">
+
+    <span class="post-create-icon">
+        <i class="fas fa-paste"></i>
+    </span>
+
+    <a href="{{ route('posts.create') }}">
+        <button type="button" class="btn btn-success mb-4">
+            Создать
+        </button>
+    </a>
+
+</div>
 
 <table class="table">
+
     <thead>
       <tr>
         <th><input type="checkbox" onclick="selectAll(this)"></th>
@@ -20,29 +33,34 @@
         <th scope="col">Действия</th>
       </tr>
     </thead>
+
     <tbody>
         @foreach ($posts as $post )
             <tr>
-                <th><input type="checkbox"></th>
-                <th scope="row">{{ $post->id }}</th>
+                <td><input type="checkbox"></td>
+                <td scope="row">{{ $post->id }}</td>
                 <td>{{ $post->title }}</td>
                 <td>
-                    <img class="post-image" src="{{ $post->image }}" alt="">
+                    <img class="table-image" src="{{ $post->image }}" alt="">
                 </td>
                 <td>{{ $post->status }}</td>
                 <td>{{ $post->project }}</td>
                 <td>{{ $post->created_at }}</td>
                 <td>{{ $post->updated_at }}</td>
-                <th>
-                    <a href="{{ route('posts.edit', $post) }}"><button type="button" class="btn btn-primary">Изменить</button></a>
+                <td>
+                    <a class="btn btn-info" href="{{ route('posts.edit', $post) }}">Смотреть</a>
                     <br>
-                    <a href="{{ route('posts.edit', $post) }}"><button type="button" class="btn btn-primary">Изменить</button></a>
+                    <a class="btn btn-primary" href="{{ route('posts.edit', $post) }}">Изменить</a>
                     <br>
-                    <a href="{{ route('posts.edit', $post) }}"><button type="button" class="btn btn-primary">Изменить</button></a>
-                </th>
+                    <a class="btn btn-danger" href="{{ route('posts.edit', $post) }}">Удалить</a>
+                </td>
             </tr>
         @endforeach
     </tbody>
 </table>
+
+<div class="paginate">
+    {{ $posts->links() }}
+</div>
 
 @endsection

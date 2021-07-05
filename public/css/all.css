@@ -545,7 +545,24 @@ footer {
   margin: 1rem 0.5rem 1rem 1rem;
 }
 
-.post-image {
+.post-create-icon {
+  font-size: 50px;
+}
+
+.table th {
+  text-align: center;
+}
+.table td {
+  text-align: center;
+  vertical-align: middle;
+}
+.table .table-image {
   height: 120px;
   width: 120px;
+}
+
+.paginate {
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
 }

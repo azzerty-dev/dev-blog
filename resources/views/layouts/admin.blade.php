@@ -12,10 +12,7 @@
     <title> @yield('title') </title>
 
     <!-- Bootstrap -->
-       {{-- <link href="{{ asset('/vendors/bootstrap/dist/css/bootstrap.min.css')}}" rel="stylesheet"> --}}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <!-- Font Awesome -->
-    <link href="/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- Custom Theme Style -->
     <link href="/build/css/custom.min.css" rel="stylesheet">
 </head>
@@ -26,7 +23,7 @@
         <div class="col-md-3 left_col">
             <div class="left_col scroll-view">
                 <div class="navbar nav_title" style="border: 0;">
-                    <a href="{{'dashboard'}}" class="site_title"><i class="fa fa-paw"></i> <span>Админ панель</span></a>
+                    <a href="{{asset('dashboard')}}" class="site_title"><i class="fa fa-paw"></i> <span>Админ панель</span></a>
                 </div>
 
                 <div class="clearfix"></div>
@@ -117,6 +114,9 @@
 <script src="/vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <!-- Custom Theme Scripts -->
 <script src="/build/js/custom.min.js"></script>
+<!-- FontAwesome -->
+<script src="https://kit.fontawesome.com/275ba3f976.js" crossorigin="anonymous"></script>
+
 
 <script src="/js/admin.js"></script>
 </body>
