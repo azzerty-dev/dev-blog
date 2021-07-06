@@ -27,6 +27,7 @@ class PostRequest extends FormRequest
             'title'=>'required',
             'body'=>'required',
             'status'=>'required',
+            'project'=>'required',
             'image'=>'required',
         ];
     }

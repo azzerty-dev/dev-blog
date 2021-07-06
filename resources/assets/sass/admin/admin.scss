@@ -42,7 +42,7 @@
 .paginate{
     display: flex;
     justify-content: center;
-    margin: 1rem;
+    margin-bottom: 1rem;
 }
 
 .alert{
@@ -57,7 +57,7 @@
     flex-direction: row;
     flex-wrap: wrap;
 
-    a, button{
+    button{
         margin: 0.2rem 0.05rem 0 0.05rem;
     }
 }

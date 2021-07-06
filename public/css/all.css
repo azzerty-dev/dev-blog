@@ -219,6 +219,10 @@ template {
   font-weight: bold;
 }
 
+.errors li {
+  margin-top: 0.25rem;
+}
+
 .wrap {
   min-width: 320px;
   max-width: 1124px;
@@ -502,10 +506,6 @@ footer {
   height: 35px;
 }
 
-.contacts-errors li {
-  margin-top: 0.25rem;
-}
-
 .contacts-submit {
   text-align: center;
   padding: 1rem;
@@ -556,7 +556,7 @@ footer {
 .paginate {
   display: flex;
   justify-content: center;
-  margin: 1rem;
+  margin-bottom: 1rem;
 }
 
 .alert h5 {
@@ -569,7 +569,7 @@ footer {
   flex-direction: row;
   flex-wrap: wrap;
 }
-.action a, .action button {
+.action button {
   margin: 0.2rem 0.05rem 0 0.05rem;
 }
 

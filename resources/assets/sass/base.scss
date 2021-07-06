@@ -5,6 +5,12 @@
     font-weight: bold;
 }
 
+.errors{
+    li{
+        margin-top: 0.25rem;
+    }
+}
+
 .wrap {
     @include min-max(320px, 1124px, 15px);
 }

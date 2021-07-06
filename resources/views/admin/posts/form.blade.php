@@ -4,18 +4,29 @@
 
 @section('content')
 
-<form method="POST" enctype="multipart/form-data"
-@if (isset($post))
-    action="{{ route('posts.update', $post) }}"
-    @else
-    action="{{ route('posts.store') }}"
-@endif
->
+    <form method="POST" enctype="multipart/form-data"
+    @if (isset($post))
+        action="{{ route('posts.update', $post) }}"
+        @else
+        action="{{ route('posts.store') }}"
+    @endif
+    >
+
     @isset($post)
         @method('PUT')
     @endisset
 
     @csrf
+    <div class="mb-3">
+        @if($errors->any())
+            <ul class="errors">
+                @foreach($errors->all() as $error)
+                    <li><h5>{{ $error }}</h5></li>
+                @endforeach
+            </ul>
+        @endif
+    </div>
+    
     <div class="mb-3">
         <label for="title" class="form-label"><h6>Название</h6></label>
         <input name="title" type="text" class="form-control"
