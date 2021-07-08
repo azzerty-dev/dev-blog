@@ -35,7 +35,7 @@ class PostRequest extends FormRequest
     public function messages(){
 
         return[
-            'title.required'=>'Поле Заголовок является обязательным.',
+            'title.required'=>'Поле заголовок является обязательным.',
             'body.required'=>'Поле содержание является обязательным.',
             'status.required'=>'Поле статус является обязательным.',
             'image.required'=>'Поле изображение является обязательным.',

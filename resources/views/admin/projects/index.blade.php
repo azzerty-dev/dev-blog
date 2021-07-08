@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('title', 'Посты')
+@section('title', 'Проекты')
 
 @section('content')
 
@@ -9,7 +9,7 @@
         <i class="fas fa-paste"></i>
     </span>
 
-    <a href="{{ route('posts.create') }}">
+    <a href="{{ route('projects.create') }}">
         <button type="button" class="btn btn-success mb-4">
             Создать
         </button>
@@ -32,9 +32,7 @@
       <tr>
         <th scope="col">id</th>
         <th scope="col">Название</th>
-        <th scope="col">Фото</th>
         <th scope="col">Статус</th>
-        <th scope="col">Проект</th>
         <th scope="col">Создано</th>
         <th scope="col">Обновлено</th>
         <th scope="col">Действия</th>
@@ -42,22 +40,18 @@
     </thead>
 
     <tbody>
-        @foreach ($posts as $post )
+        @foreach ($projects as $project )
             <tr>
-                <td scope="row">{{ $post->id }}</td>
-                <td>{{ $post->title }}</td>
-                <td>
-                    <img class="table-image" src="{{ $post->image }}" alt="">
-                </td>
-                <td>{{ $post->status }}</td>
-                <td>{{ $post->project }}</td>
-                <td>{{ $post->created_at }}</td>
-                <td>{{ $post->updated_at }}</td>
+                <td scope="row">{{ $project->id }}</td>
+                <td>{{ $project->name }}</td>
+                <td>{{ $project->status }}</td>
+                <td>{{ $project->created_at }}</td>
+                <td>{{ $project->updated_at }}</td>
                 <td>
                     <div class="action">
-                        <a href="{{ asset(route('posts.edit', $post)) }}"><button class="btn btn-info">Смотреть</button></a>
-                        <a href="{{ asset(route('posts.edit', $post)) }}"><button class="btn btn-primary">Обновить</button></a>
-                        <form method="POST" action="{{ asset(route('posts.destroy', $post)) }}">
+                        <a href="{{ asset(route('projects.edit', $project)) }}"><button class="btn btn-info">Смотреть</button></a>
+                        <a href="{{ asset(route('projects.edit', $project)) }}"><button class="btn btn-primary">Обновить</button></a>
+                        <form method="POST" action="{{ asset(route('projects.destroy', $project)) }}">
                             @csrf
                             @method('DELETE')
                             <button class="btn btn-danger" type="submit">Удалить</button>
@@ -70,7 +64,7 @@
 </table>
 
 <div class="paginate">
-    {{ $posts->links() }}
+    {{ $projects->links() }}
 </div>
 
 @endsection

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\PostRequest;
 use App\Models\Post;
+use App\Models\Project;
 use Illuminate\Http\Request;
 use Str;
 
@@ -27,7 +28,8 @@ class PostController extends Controller
      */
     public function create()
     {
-        return view('admin.posts.form');
+        $projects = Project::get();
+        return view('admin.posts.form', compact('projects'));
     }
 
     /**
@@ -69,7 +71,8 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
-        return view('admin.posts.form', compact('post'));
+        $projects = Project::get();
+        return view('admin.posts.form', compact('post', 'projects'));
     }
 
     /**
@@ -83,11 +86,21 @@ class PostController extends Controller
     {
         $post->title = $request->input('title');
         $post->body = $request->input('body');
-        $post->image = $request->file('image')->store('post-content');
-        $post->project = $request->input('project');
-        $post->status = $request->input('status');
         $post->slug = Str::slug($request->title, '-');
-        $post->save();
+        
+        if($request->project){
+            $post->project = $request->input('project');
+        }
+        
+        if($request->status){
+            $post->status = $request->input('status');
+        }
+
+        if($request->image){
+            $post->image = $request->file('image')->store('post-content');            
+        }
+        
+        $post->update();
 
         return redirect()->route('posts.index')->withSuccess('Пост обновлён');
     }

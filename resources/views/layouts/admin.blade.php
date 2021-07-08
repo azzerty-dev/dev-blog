@@ -50,7 +50,7 @@
                             <li><a><i class="fa fa-bug"></i> Посты <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
                                     <li><a href="{{ route('posts.index') }}">Посты</a></li>
-                                    <li><a href="projects.html">Проекты</a></li>
+                                    <li><a href="{{ route('projects.index') }}">Проекты</a></li>
                                     <li><a href="project_detail.html">Project Detail</a></li>
                                     <li><a href="contacts.html">Contacts</a></li>
                                     <li><a href="profile.html">Profile</a></li>
